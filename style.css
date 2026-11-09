@@ -1,0 +1,158 @@
+/* ==========================================================================
+   HARVARD CRIMSON & IVY LEAGUE STYLES
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --harvard-crimson: #A51C30;
+  --harvard-dark-crimson: #710919;
+  --harvard-gold: #c5a059;
+  --dark-bg: white;
+  --panel-bg: rgba(22, 24, 33, 0.92);
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(165, 28, 48, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(197, 160, 89, 0.08) 0%, transparent 40%);
+  color: #f0f0f0;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Main Form Card */
+#cover {
+  position: relative;
+  background: var(--panel-bg);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 12px;
+  padding: 40px 35px;
+  width: 380px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(165, 28, 48, 0.2);
+  overflow: hidden;
+}
+
+/* Faded Harvard "H" Shield Logo Background */
+#cover::before {
+  content: "H";
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 240px;
+  color: var(--harvard-crimson);
+  opacity: 0.07;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+
+/* Title Styling */
+.harvard-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.harvard-header h1 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.harvard-header span {
+  font-size: 11px;
+  color: var(--harvard-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Text Input Field */
+#input1 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(10, 12, 16, 0.8);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+#input1:focus {
+  border-color: var(--harvard-crimson);
+  box-shadow: 0 0 12px rgba(165, 28, 48, 0.4);
+  background: rgba(10, 12, 16, 0.95);
+}
+
+#input1::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Crimson Button */
+input[type="button"] {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--harvard-crimson), var(--harvard-dark-crimson));
+  border: 1px solid var(--harvard-gold);
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+input[type="button"]:hover {
+  background: linear-gradient(135deg, #b81f37, var(--harvard-crimson));
+  box-shadow: 0 0 20px rgba(165, 28, 48, 0.6);
+  font-family: var(--font-serif);
+  transform: translateY(-1px);
+}
+
+input[type="button"]:active {
+  transform: translateY(1px);
+}
+
+/* Output Display Box */
+#output {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 60px;
+  padding: 14px;
+  background: rgba(5, 6, 8, 0.7);
+  border-left: 3px solid var(--harvard-gold);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  word-break: break-word;
+}
